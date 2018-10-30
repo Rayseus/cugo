@@ -1,0 +1,18 @@
+<div class="cotainer">
+    <div class="row" ng-controller="upload">
+        <!-- <div class="fileupload">
+            <input type="file" fileinput="file" filepreview="filepreview"/>
+        </div>
+        <div class="filepreview">
+            <img [src]="filepreview" class="img-responsive" ng-show="filepreview"/>
+        </div> -->
+        <div class="fileupload">
+            <input type="file" id="feature" ng2FileSelect [uploader]="uploader" (change)="selectedFile($event)"/>
+            <!-- <input type="file" fileinput="file" filepreview="filepreview"/> -->
+        </div>
+        <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+            Upload an Feature
+        </button>
+
+    </div>
+</div>

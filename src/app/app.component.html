@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
+
+<div style="text-align:center">
+  <h1>Cugo</h1>
+</div>
+
+<div class="main">
+  <!-- <ul class="nav nav-pills" role="tablist">
+    <li class="active"><a href="#feature-tab" data-toggle="tab">Feature</a></li>
+    <li><a href="#output-tab" data-toggle="tab">Output</a></li>
+  </ul> -->
+
+  <div class="tab-content">
+    <!-- <div class="tab-pane active" id="feature-tab">
+      <div id="feature"><app-upload></app-upload></div>
+    </div>
+    
+    <div class="tab-pane" id="output-tab">
+        <pre id="output">Output</pre>
+    </div> -->
+    <!-- <app-upload></app-upload> -->
+    <h1>{{title}}</h1>
+    <input type="file" file-reader="fileContent" (change)="selectedFile($event)"/>
+    
+    <div ng-if="fileContent" class="contents">
+      <ul>
+        <ul *ngFor="let fileContent of fileContents">{{fileContent}}</ul>
+      </ul>
+      
+      
+    </div>
+
+</div>
+
+<!-- <div class="footer">
+    <button class="btn" id="run-feature">Run Feature</button>
+</div> -->
+
+<router-outlet></router-outlet>
